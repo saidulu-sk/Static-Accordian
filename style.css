@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(112, 212, 179);
+}
+.accordian{
+    max-width: 800px;
+}
+.accordian .contenBx{
+    position: relative;
+    margin: 10px 20px;
+}
+.accordian .contenBx .label{
+    position: relative;
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+}
+.accordian .contenBx .label:hover{
+    background-color: rgb(102, 19, 180);
+}
+.accordian .contenBx .label::before{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+.accordian .contenBx .content{
+    position: relative;
+    background-color: rgb(221, 245, 229);
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    overflow-y: auto;
+}
+.accordian .contenBx.active .content{
+    height: 150px;
+    padding: 10px;
+}
+.accordian .contenBx.active .label::before{
+    content: '-';
+}
+h1{
+    text-align: center;
+    top: 5%;
+    position: absolute;
+}

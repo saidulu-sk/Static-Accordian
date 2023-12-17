@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Accordian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Static Accordian</h1>
+    <div class="accordian">
+        <div class="contenBx">
+            <div class="label">What Is a Personal Loan?</div>
+            <div class="content">
+                <p>A personal loan is the total money you can borrow from different financial bodies like banks, credit unions and online lenders. Once approved, you repay the loan in fixed monthly instalments with interest. Most lenders offer personal loans as unsecured loans.</p>
+            </div>
+        </div>
+        <div class="contenBx">
+            <div class="label">Submit the application</div>
+            <div class="content">
+                <p>Fill out your loan application, online or in person, along with all required documentation. Wait for the lender to evaluate your application and creditworthiness.
+
+                </p>
+            </div>
+        </div>
+        <div class="contenBx">
+            <div class="label">Calculate EMI</div>
+            <div class="content">
+                <p>Most lenders have online EMI calculators. It helps calculate your monthly EMI for the desired loan amount and understand your repayment burden. This EMI calculator is easy to use and free of cost. Check it out now!</p>
+            </div>
+        </div>
+        <div class="contenBx">
+            <div class="label">Loan Repay Policy</div>
+            <div class="content">
+                <p>It refers to the act of paying back the borrowed amount to the lenders along with the applicable interest. The amount is repaid as per a pre-determined schedule as equated monthly installments (EMIs). The EMI comprises principal and interest and must be repaid within the loan duration.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const accordian= document.getElementsByClassName('contenBx');
+
+        for(i=0; i<accordian.length; i++){
+            accordian[i].addEventListener('click',function(){
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+</body>
+</html>
